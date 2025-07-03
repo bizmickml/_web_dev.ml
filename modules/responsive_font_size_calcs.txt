@@ -1,0 +1,22 @@
+1. Convert min and max screen widths to rem (width / 16px) because 16px is the standard font size for most browsers
+2. Choose a min and max font size in rem
+    2(alt). Choose a max based on a multiple of the min.  
+      - use .625rem as the min which should be 10px
+      - use a multiplier to determine the max.
+3. Calc using the following formula:
+
+------------ Formula -----------------
+
+  slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
+  yAxixIntersection = -minWidth * slope + minFontSize
+  preferredValue = yAxisIntersection[rem] + (slope * 100)[vw]
+
+--------------------------------------------------------------------------------------------
+in this example we're using a minimum screen width of 360px (or 22.5rem) with a miniumum font size of .625rem which should be 10px
+and a maximum screen size of 2545px (or 159.0625rem) with a maximum font size of 1.875rem (or 3 times the min)
+slope = (3 - 1) / (159.0625 - 22.5) = .0146
+slope = 2 / 136.5625 = .0146
+yAxixIntersection = -22.5 * .0146 + 1 = .6715
+preferredValue = .6715rem + (.0146 * 100)vw
+preferredValue = .6715rem + 1.46vw
+

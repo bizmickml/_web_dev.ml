@@ -1,0 +1,20 @@
+First, solve for "a" to get the long side of the triangle
+
+(a * a) = (b * b) + (c * c) - 2bc cos(A)
+
+a = long side
+b = opposite side
+c = adjacent side
+A = angle between b and c
+
+----------------------------------------------------------
+
+Now use law of sines to find the angle "B" facing the opposite side
+
+sin(B) / b = sin(A) / a
+
+B = angle facing short side
+b = length of short side
+A = angle between b and c
+a = long side of the triangle
+

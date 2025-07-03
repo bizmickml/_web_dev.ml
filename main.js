@@ -1,0 +1,82 @@
+import preferredFontSize from "./modules/responsiveFontSize.js";
+import navControl from "./modules/responsiveNav.js";
+import elWidthControl from "./modules/responsiveWidths.js";
+import padControl from "./modules/responsivePadding.js";
+
+
+/** ---- For Module Parameters ---- */
+const minFontSize = 10;
+  // multiplier calulates max font at the max screen width
+const fontSizeMultiplier = 2.6;
+const maxScreenWidth = 2560;
+const minScreenWidth = 320;
+
+  /** ---- section #why-us ---- */
+const whyUsMinPadding = 10;
+const whyUsMaxWidth = 1900;
+const whyUsMaxPadding = (2560 - whyUsMaxWidth) / 2;
+const whyUsImgMinWidth = 100;
+const whyUsImgMaxWidth = whyUsMaxWidth * .20;
+const whyUsTxtMinWidth = 285;
+const whyUsTxtMaxWidth = whyUsMaxWidth * .7;
+const pricingMinPadding = whyUsMinPadding;
+const pricingMaxPadding = (2560 - 2200) / 2;
+
+/** ---- Page Elements ---- */
+const nav = document.getElementById("nav");
+const mobileNav = document.getElementById("mobile-nav");
+const mobileNavIcon = document.getElementById("mobile-menu-icon");
+const whyUsSection = document.getElementById("why-us");
+const whyUsImgs = [...whyUsSection.querySelectorAll("img")];
+const whyUsTextWraps = [...whyUsSection.getElementsByClassName("text-wrap")];
+const pricingContainer = document.getElementById("pricing");
+
+function whyUsLayout() {
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  const screenRes = screenWidth / screenHeight;
+
+  whyUsTextWraps.forEach((el) => {
+
+    if (screenRes < 1 && el.parentNode.id.includes("2")) {
+      el.classList.remove("right-align");
+      el.parentNode.style.flexDirection = "row-reverse";
+      el.parentNode.style.flexWrap = "wrap-reverse"
+
+    } else if (screenRes < 1 && !el.parentNode.id.includes("2")) {
+      el.parentNode.style.flexWrap = "wrap";
+
+    } else if (screenRes >= 1 && !el.parentNode.id.includes("2")) {
+      el.parentNode.style.flexWrap = "nowrap";
+
+    } else if (screenRes >= 1 && el.parentNode.id.includes("2")) {
+      el.classList.add("right-align");
+      el.parentNode.style.flexDirection = "row";
+      el.parentNode.style.flexWrap = "nowrap";
+    } 
+  })
+
+}
+
+window.onload = () => {
+  document.querySelector(":root").setAttribute("style", `font-size: ${preferredFontSize(minFontSize, fontSizeMultiplier, minScreenWidth, maxScreenWidth)};`)
+  navControl(nav, mobileNav, mobileNavIcon);
+  padControl(whyUsSection, whyUsMinPadding, whyUsMaxPadding);
+  padControl(pricingContainer, pricingMinPadding, pricingMaxPadding);
+
+  whyUsImgs.forEach((el) => {
+    elWidthControl(el, whyUsImgMinWidth, whyUsImgMaxWidth, minScreenWidth, maxScreenWidth);
+  })
+
+  whyUsTextWraps.forEach((el) => {
+    elWidthControl(el, whyUsTxtMinWidth, whyUsTxtMaxWidth, minScreenWidth, maxScreenWidth);
+  })
+  whyUsLayout();
+}
+
+window.addEventListener("resize", () => {
+  navControl(nav, mobileNav, mobileNavIcon);
+  padControl(whyUsSection, whyUsMinPadding, whyUsMaxPadding);
+  whyUsLayout();
+});
+

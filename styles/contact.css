@@ -1,0 +1,105 @@
+#contact {
+  height: calc(100vh - var(--headHeight));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: radial-gradient(110% 110% at top left, var(--blue-trans), var(--blue), var(--blue-dark));
+}
+
+#contact h2 {
+  font-family: var(--headline);
+  color: var(--white);
+  font-size: 4.5rem;
+  text-shadow: .1rem .1rem .4rem var(--blue-dark);
+  line-height: 1;
+}
+
+#contact p {
+  color: var(--yellow);
+  font-family: var(--subheading);
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-shadow: .05rem .05rem .1rem var(--yellow-dark);
+  margin-top: 1.6rem;
+}
+
+#contact .link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  gap: 3rem;
+}
+
+#contact #contact-link-container {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#contact #contact-link-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  font-size: 1.8rem;
+  font-family: var(--subheading);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 2rem;
+  background: radial-gradient(250% 125% at top right, var(--yellow-light), var(--yellow) 10%, var(--yellow-dark));
+  box-shadow: 0 0 .4rem var(--blue-dark);
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  transition: 200ms;
+}
+
+#contact #contact-link-container a:hover {
+  background: radial-gradient(275% 150% at top right, var(--yellow-light), var(--yellow) 10%, var(--yellow-dark));
+  transform: scale(1.1);
+  box-shadow: 0 0 .6rem var(--blue-dark);
+}
+
+#contact #contact-link-container img {
+  width: 2rem;
+}
+
+#contact #social-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#contact #social-link-container a {
+  height: 2.5rem;
+}
+
+#contact #social-link-container img {
+  height: 100%;
+  width: auto;
+}
+
+#contact a {
+  transition: 200ms;
+}
+
+#contact a:hover {
+  transform: scale(1.1);
+}
+
+#contact .hero-img {
+  width: 10rem;
+  height: auto;
+  border-radius: 100%;
+  box-shadow: 0 0 .3rem var(--blue-dark);
+}

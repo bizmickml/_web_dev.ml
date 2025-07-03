@@ -1,0 +1,32 @@
+/** -------------------------------------------------------------------
+  * Work on this later
+  * Looking for a responsive geometric "v" or "arrow down" kind of look
+
+.arrow-container {
+  position: absolute;
+  width: 100%;
+  height: 66%;
+  bottom: 0;
+}
+
+.left-angle {
+  --angle: 45deg;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(var(--angle), var(--white) 60%, transparent 60%);
+}
+
+.right-angle {
+  --angle: -45deg;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(var(--angle), var(--white) 60%, transparent 60%);
+}
+
+---------------------------------------------------------------------- */
