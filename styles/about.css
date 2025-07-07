@@ -1,0 +1,119 @@
+#about {
+  background: url(../Images/newspaper.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 .8rem var(--blue-dark);
+  padding: 1rem;
+}
+
+#about .head-wrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#about .head-wrap figure {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 400px;
+}
+
+#about .head-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: .25rem;
+  box-shadow: 0 0 .2rem var(--yellow-dark);
+}
+
+#about .head-wrap figcaption {
+  text-align: right;
+  font-size: .75rem;
+  font-style: italic;
+  color: var(--black);
+}
+
+#about .head-wrap h2 {
+  text-align: left;
+  color: var(--black);
+  font-size: 2.2rem;
+  font-family: var(--subheading);
+  color: var(--black);
+}
+
+#about .my-story #hiking-story, 
+#about .my-story #learning-webstuff {
+  margin-top: 1rem;
+  column-width: clamp(280px, 25vw, 375px);
+  font-size: clamp(11px, 1rem, 22px);
+}
+
+#about .my-story p:not(:first-of-type) {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+#about .my-story #hiking-story p:first-of-type::first-letter {
+  font-size: clamp(33px, 2.5rem, 55px);
+  color: var(--pink);
+  font-weight: bold;
+  float: left;
+  padding-top: .25rem;
+  padding-right: .25rem;
+}
+
+#about .my-story aside {
+  max-width: 200px;
+  background: var(--pink);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: .75rem;
+  box-shadow: -.2rem -.2rem .3rem var(--pink-dark);
+  margin-top: 1rem;
+  margin-left: 1rem;
+  float: right;
+}
+
+#about .my-story hr {
+  margin: 1rem auto 0;
+  border-color: var(--pink);
+  width: 90%;
+}
+
+#about .my-story .block-quote {
+  margin: 0 2rem;
+  font-style: italic;
+  color: var(--pink-dark);
+}
+
+#about .my-story .callout-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#about .my-story .inline-quote {
+  font-style: italic;
+  color: var(--pink-dark);
+  opacity: .8;
+}
+
+#about .my-story #learning-webstuff .larger-text {
+  font-size: 1.1rem;
+}
+
+#about .my-story #learning-webstuff .attention-grabber {
+  background: var(--pink);
+  padding: 1rem;
+  border-radius: .5rem;
+  color: var(--white);
+}
+
+#about .my-story #learning-webstuff .guarantee {
+  font-weight: bold;
+  font-size: 1.1rem;
+}

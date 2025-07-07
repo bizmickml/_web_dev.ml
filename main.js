@@ -2,7 +2,7 @@ import preferredFontSize from "./modules/responsiveFontSize.js";
 import navControl from "./modules/responsiveNav.js";
 import elWidthControl from "./modules/responsiveWidths.js";
 import padControl from "./modules/responsivePadding.js";
-
+import marginControl from "./modules/responsiveMargin.js";
 
 /** ---- For Module Parameters ---- */
 const minFontSize = 10;
@@ -22,6 +22,12 @@ const whyUsTxtMaxWidth = whyUsMaxWidth * .7;
 const pricingMinPadding = whyUsMinPadding;
 const pricingMaxPadding = (2560 - 2200) / 2;
 
+  /** ---- section #about ---- */
+const aboutMinMargin = 10;
+const aboutMaxWidth = 1900;
+const aboutMaxMargin = (2560 - aboutMaxWidth) / 2;
+
+
 /** ---- Page Elements ---- */
 const nav = document.getElementById("nav");
 const mobileNav = document.getElementById("mobile-nav");
@@ -30,8 +36,13 @@ const whyUsSection = document.getElementById("why-us");
 const whyUsImgs = [...whyUsSection.querySelectorAll("img")];
 const whyUsTextWraps = [...whyUsSection.getElementsByClassName("text-wrap")];
 const pricingContainer = document.getElementById("pricing");
+const aboutSection = document.getElementById("about");
+const aboutHeadWrap = document.getElementById("about-head-wrap");
+const aboutHeadFig = document.getElementById("about-head-fig");
+const aboutHeadTitle = document.getElementById("about-title");
 
-function whyUsLayout() {
+
+function pageLayout() {
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;
   const screenRes = screenWidth / screenHeight;
@@ -56,6 +67,17 @@ function whyUsLayout() {
     } 
   })
 
+  if (screenRes < 1) {
+    aboutHeadWrap.style.flexWrap = "wrap-reverse";
+    aboutHeadTitle.style.flex = "0 0 100%";
+    aboutHeadTitle.style.textAlign = "center";
+
+  } else if (screenRes >= 1) {
+    aboutHeadWrap.style.flexWrap = "nowrap";
+    aboutHeadTitle.style.flex = "0 0 69%";
+    aboutHeadTitle.style.textAlign = "left";
+  }
+
 }
 
 window.onload = () => {
@@ -71,12 +93,14 @@ window.onload = () => {
   whyUsTextWraps.forEach((el) => {
     elWidthControl(el, whyUsTxtMinWidth, whyUsTxtMaxWidth, minScreenWidth, maxScreenWidth);
   })
-  whyUsLayout();
+  pageLayout();
+
+  marginControl(aboutSection, aboutMinMargin, aboutMaxMargin)
 }
 
 window.addEventListener("resize", () => {
   navControl(nav, mobileNav, mobileNavIcon);
   padControl(whyUsSection, whyUsMinPadding, whyUsMaxPadding);
-  whyUsLayout();
+  pageLayout();
 });
 
