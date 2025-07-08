@@ -1,0 +1,67 @@
+.animate.spin-Y {
+  animation-name: spin-Y;
+  animation-duration: 6000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate.fly-in-right {
+  transform: translateX(100%);
+  animation-name: fly-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animate.fly-in-left {
+  transform: translateX(-100%);
+  animation-name: fly-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animate.fade-in {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animate.delay-1 {
+  animation-delay: 300ms;
+}
+
+.animate.delay-2 {
+  animation-delay: 600ms;
+}
+
+.animate.delay-3 {
+  animation-delay: 900ms;
+}
+
+.animate.delay-4 {
+  animation-delay: 1200ms;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: unset;
+  }
+}
+
+@keyframes fly-in {
+  to {
+    transform: unset;
+  }
+}
+
+@keyframes spin-Y {
+  50% {
+    transform: rotateY(90deg);
+  } 
+}
