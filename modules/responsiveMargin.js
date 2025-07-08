@@ -6,6 +6,7 @@ export default function(el, minMargin, maxMargin) {
 
   //get window font size
   const calculatedFontSize = window.getComputedStyle(document.documentElement).fontSize;
+  const windowWidth = window.innerWidth;
 
   //convert window font size string to a number
   const calcFontSizeNum = Number(calculatedFontSize.slice(0, calculatedFontSize.indexOf("p")));

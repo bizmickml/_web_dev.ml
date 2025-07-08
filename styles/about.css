@@ -6,6 +6,9 @@
   overflow: hidden;
   box-shadow: 0 0 .8rem var(--blue-dark);
   padding: 1rem;
+  max-width: clamp(280px, 96cqw, 1900px);
+  margin: 5vh auto;
+  scroll-margin-top: calc(var(--headHeight) + 5vh);
 }
 
 #about .head-wrap {
@@ -49,7 +52,7 @@
 #about .my-story #hiking-story, 
 #about .my-story #learning-webstuff {
   margin-top: 1rem;
-  column-width: clamp(280px, 25vw, 375px);
+  column-width: clamp(280px, 30cqw, 450px);
   font-size: clamp(11px, 1rem, 22px);
 }
 
@@ -58,7 +61,7 @@
   text-align: justify;
 }
 
-#about .my-story #hiking-story p:first-of-type::first-letter {
+#about .my-story #hiking-story .first-paragraph::first-letter {
   font-size: clamp(33px, 2.5rem, 55px);
   color: var(--pink);
   font-weight: bold;
@@ -68,15 +71,17 @@
 }
 
 #about .my-story aside {
-  max-width: 200px;
+  width: clamp(280px, 50%, 300px);
   background: var(--pink);
   color: var(--white);
   padding: 1rem;
   border-radius: .75rem;
-  box-shadow: -.2rem -.2rem .3rem var(--pink-dark);
-  margin-top: 1rem;
-  margin-left: 1rem;
+  box-shadow: -.1rem -.1rem .3rem var(--pink-dark);
+  margin: 1rem 0 1rem 1rem;
   float: right;
+  font-size: .9rem;
+  text-align: justify;
+  break-inside: avoid;
 }
 
 #about .my-story hr {
@@ -85,10 +90,15 @@
   width: 90%;
 }
 
+#about .keep-together {
+  break-inside: avoid;
+}
+
 #about .my-story .block-quote {
-  margin: 0 2rem;
+  margin: 1rem 2rem;
   font-style: italic;
   color: var(--pink-dark);
+  text-align: justify;
 }
 
 #about .my-story .callout-text {
@@ -97,23 +107,32 @@
 }
 
 #about .my-story .inline-quote {
+  display: block;
   font-style: italic;
   color: var(--pink-dark);
   opacity: .8;
+  margin: .5rem;
+  break-inside: avoid;
 }
 
 #about .my-story #learning-webstuff .larger-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #about .my-story #learning-webstuff .attention-grabber {
   background: var(--pink);
-  padding: 1rem;
+  border: 1px solid var(--pink-dark);
+  box-shadow: 0 0 .2rem var(--pink-dark);
+  padding: .8rem;
   border-radius: .5rem;
   color: var(--white);
 }
 
 #about .my-story #learning-webstuff .guarantee {
+  display: block;
+  margin: .35rem;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1;
+  break-inside: avoid;
 }

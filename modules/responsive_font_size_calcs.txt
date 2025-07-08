@@ -8,15 +8,15 @@
 ------------ Formula -----------------
 
   slope = (maxFontSize - minFontSize) / (maxWidth - minWidth)
-  yAxixIntersection = -minWidth * slope + minFontSize
+  yAxisIntersection = -minWidth * slope + minFontSize
   preferredValue = yAxisIntersection[rem] + (slope * 100)[vw]
 
 --------------------------------------------------------------------------------------------
-in this example we're using a minimum screen width of 360px (or 22.5rem) with a miniumum font size of .625rem which should be 10px
+in this example we're using a minimum screen width of 360px (or 22.5rem) with a minimum font size of .625rem which should be 10px
 and a maximum screen size of 2545px (or 159.0625rem) with a maximum font size of 1.875rem (or 3 times the min)
 slope = (3 - 1) / (159.0625 - 22.5) = .0146
 slope = 2 / 136.5625 = .0146
-yAxixIntersection = -22.5 * .0146 + 1 = .6715
+yAxisIntersection = -22.5 * .0146 + 1 = .6715
 preferredValue = .6715rem + (.0146 * 100)vw
 preferredValue = .6715rem + 1.46vw
 

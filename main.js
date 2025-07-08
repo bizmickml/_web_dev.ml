@@ -22,6 +22,10 @@ const whyUsTxtMaxWidth = whyUsMaxWidth * .7;
 const pricingMinPadding = whyUsMinPadding;
 const pricingMaxPadding = (2560 - 2200) / 2;
 
+  /** ---- section #quick-start ---- */
+const quickStartMinMargin = 10;
+const quickStartMaxWidth = 1280;
+
   /** ---- section #about ---- */
 const aboutMinMargin = 10;
 const aboutMaxWidth = 1900;
@@ -38,8 +42,8 @@ const whyUsTextWraps = [...whyUsSection.getElementsByClassName("text-wrap")];
 const pricingContainer = document.getElementById("pricing");
 const aboutSection = document.getElementById("about");
 const aboutHeadWrap = document.getElementById("about-head-wrap");
-const aboutHeadFig = document.getElementById("about-head-fig");
 const aboutHeadTitle = document.getElementById("about-title");
+const quickStartSection = document.getElementById("quick-start");
 
 
 function pageLayout() {
@@ -95,7 +99,6 @@ window.onload = () => {
   })
   pageLayout();
 
-  marginControl(aboutSection, aboutMinMargin, aboutMaxMargin)
 }
 
 window.addEventListener("resize", () => {

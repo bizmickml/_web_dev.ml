@@ -5,6 +5,7 @@
 @import url(./styles/contact.css);
 @import url(./styles/footer.css);
 @import url(./styles/about.css);
+@import url(./styles/quick-start.css);
 
 :root {
   --blue-light: rgb(153, 230, 255);
@@ -67,13 +68,16 @@ img {
   width: 30px;
 }
 
-button {
+button:not(.question-btn) {
   border-radius: .2rem;
   border: none;
   box-shadow: 0 0 .1rem var(--blue-dark);
   background: radial-gradient(120% 80% at center, var(--yellow) 45%, var(--yellow-dark));
-  padding: .25rem .75rem;
+  padding: .25rem 1.2rem;
   transition: 200ms;
+  font-size: 1rem;
+  font-family: var(--paragraph);
+  font-weight: bold;
 }
 
 button:hover {
