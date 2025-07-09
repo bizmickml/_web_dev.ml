@@ -2,7 +2,7 @@ import preferredFontSize from "./modules/responsiveFontSize.js";
 import navControl from "./modules/responsiveNav.js";
 import elWidthControl from "./modules/responsiveWidths.js";
 import padControl from "./modules/responsivePadding.js";
-import marginControl from "./modules/responsiveMargin.js";
+
 
 /** ---- For Module Parameters ---- */
 const minFontSize = 10;
@@ -22,15 +22,6 @@ const whyUsTxtMaxWidth = whyUsMaxWidth * .7;
 const pricingMinPadding = whyUsMinPadding;
 const pricingMaxPadding = (2560 - 2200) / 2;
 
-  /** ---- section #quick-start ---- */
-const quickStartMinMargin = 10;
-const quickStartMaxWidth = 1280;
-
-  /** ---- section #about ---- */
-const aboutMinMargin = 10;
-const aboutMaxWidth = 1900;
-const aboutMaxMargin = (2560 - aboutMaxWidth) / 2;
-
 
 /** ---- Page Elements ---- */
 const nav = document.getElementById("nav");
@@ -40,10 +31,8 @@ const whyUsSection = document.getElementById("why-us");
 const whyUsImgs = [...whyUsSection.querySelectorAll("img")];
 const whyUsTextWraps = [...whyUsSection.getElementsByClassName("text-wrap")];
 const pricingContainer = document.getElementById("pricing");
-const aboutSection = document.getElementById("about");
 const aboutHeadWrap = document.getElementById("about-head-wrap");
 const aboutHeadTitle = document.getElementById("about-title");
-const quickStartSection = document.getElementById("quick-start");
 
 
 function pageLayout() {
