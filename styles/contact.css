@@ -6,6 +6,7 @@
   justify-content: space-evenly;
   text-align: center;
   background: radial-gradient(110% 110% at top left, var(--blue-trans), var(--blue), var(--blue-dark));
+  scroll-margin-top: var(--headHeight);
 }
 
 #contact h2 {
