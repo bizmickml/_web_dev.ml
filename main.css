@@ -6,6 +6,7 @@
 @import url(./styles/footer.css);
 @import url(./styles/about.css);
 @import url(./styles/quick-start.css);
+@import url(./styles/animations.css);
 
 :root {
   --blue-light: rgb(153, 230, 255);

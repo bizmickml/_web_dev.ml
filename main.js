@@ -33,6 +33,8 @@ const whyUsTextWraps = [...whyUsSection.getElementsByClassName("text-wrap")];
 const pricingContainer = document.getElementById("pricing");
 const aboutHeadWrap = document.getElementById("about-head-wrap");
 const aboutHeadTitle = document.getElementById("about-title");
+const keyPoints = [document.getElementById("key-point-1"), document.getElementById("key-point-2"), document.getElementById("key-point-3")];
+
 
 
 function pageLayout() {
@@ -96,3 +98,19 @@ window.addEventListener("resize", () => {
   pageLayout();
 });
 
+window.addEventListener("scroll", () => {
+  const windowHeight = window.innerHeight
+
+  keyPoints.forEach((el) => {
+    const elTop = el.getBoundingClientRect().y;
+    const elBot = el.getBoundingClientRect().bottom;
+
+    if (elTop > 0 && elTop < (windowHeight * .66)) {
+      el.classList.add("animate")
+
+    } else if (elBot < 0 || elTop > windowHeight) {
+      el.classList.contains("animate") && el.classList.remove("animate")
+    }
+  })
+
+})
