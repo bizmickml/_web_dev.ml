@@ -1,51 +1,69 @@
-.animate.spin-Y {
-  animation-name: spin-Y;
-  animation-duration: 6000ms;
-  animation-timing-function: linear;
+.count-infinite {
   animation-iteration-count: infinite;
 }
 
-.animate.fly-in-right {
-  transform: translateX(100%);
-  animation-name: fly-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.length-6000 {
+  animation-duration: 6000ms;
 }
 
-.animate.fly-in-left {
-  transform: translateX(-100%);
-  animation-name: fly-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.length-1000 {
+  animation-duration: 1000ms;
 }
 
-.animate.fade-in {
-  opacity: 0;
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.length-500 {
+  animation-duration: 500ms;
 }
 
-.animate.delay-1 {
+.delay-1 {
   animation-delay: 300ms;
 }
 
-.animate.delay-2 {
+.delay-2 {
   animation-delay: 600ms;
 }
 
-.animate.delay-3 {
+.delay-3 {
   animation-delay: 900ms;
 }
 
-.animate.delay-4 {
+.delay-4 {
   animation-delay: 1200ms;
+}
+
+.animate.rotate-Y {
+  animation-name: rotate-Y;
+  animation-timing-function: linear;
+}
+
+.fly-in-right {
+  transform: translateX(100vw);
+}
+
+.fly-in-left {
+  transform: translateX(-100vw);
+}
+
+.animate.fly-in-right, 
+.animate.fly-in-left {
+  animation-name: fly-in;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+.animate.fade-in {
+  animation-name: fade-in;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.hover.spin-Y:hover {
+  animation-name: spin-Y;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fade-in {
@@ -60,8 +78,14 @@
   }
 }
 
-@keyframes spin-Y {
+@keyframes rotate-Y {
   50% {
     transform: rotateY(90deg);
   } 
+}
+
+@keyframes spin-Y {
+  to {
+    transform: rotateY(360deg);
+  }
 }
