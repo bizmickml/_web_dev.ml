@@ -36,6 +36,7 @@ const aboutHeadTitle = document.getElementById("about-title");
 const keyPoints = [document.getElementById("key-point-1"), document.getElementById("key-point-2"), document.getElementById("key-point-3")];
 
 
+
 function pageLayout() {
   const screenWidth = window.innerWidth;
   const screenHeight = window.innerHeight;

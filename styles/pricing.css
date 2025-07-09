@@ -5,6 +5,7 @@
   align-items: start;
   justify-content: center;
   gap: 2rem;
+  scroll-margin-top: var(--headHeight);
 }
 
 #pricing .head-wrapper {

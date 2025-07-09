@@ -46,7 +46,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-margin-top: var(--headHeight);
 }
 
 html {
@@ -62,11 +61,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
-}
-
-/* temp sizing */
-img {
-  width: 30px;
 }
 
 button:not(.question-btn) {
