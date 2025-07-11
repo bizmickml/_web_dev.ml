@@ -19,11 +19,28 @@
   
     gtag('config', 'AW-17332276422');
   </script>
+    <!-- Event snippet for Contact conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17332276422/6CuOCIuy0e4aEMaZ1shA',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
 </head>
 <body>
   <header>
     <img id="logo" src="./Images/webDev.ML_Logo.png" alt="WebDev.ML logo" class="animate rotate-Y delay-3 count-infinite length-6000">
-    <a href="tel:5085587844" id="phone-link">(508) 558-7844</a>
+    <a href="tel:5085587844" id="phone-link" onclick="gtag_report_conversion()">(508) 558-7844</a>
     <nav id="nav">
       <ul>
         <li><a href="#why-us">Why us?</a></li>
@@ -296,8 +313,8 @@
     <img class="hero-img" src="./Images/MikeHero.png" alt="Owner, Mike Lamondy"/>
     <div class="link-wrapper">
       <div id="contact-link-container">
-        <a href="mailto:bizmickml@gmail.com"><img src="./Images/mail_37dp_12130F_FILL1_wght700_GRAD0_opsz40.png" alt="email icon"> <span>E-mail</span></a>
-        <a href="tel:5085587844"><img src="./Images/call_37dp_12130F_FILL1_wght700_GRAD0_opsz40.png" alt="phone receiver icon"> <span>Phone</span></a>
+        <a href="mailto:bizmickml@gmail.com" onclick="gtag_report_conversion()"><img src="./Images/mail_37dp_12130F_FILL1_wght700_GRAD0_opsz40.png" alt="email icon"> <span>E-mail</span></a>
+        <a href="tel:5085587844" onclick="gtag_report_conversion()"><img src="./Images/call_37dp_12130F_FILL1_wght700_GRAD0_opsz40.png" alt="phone receiver icon"> <span>Phone</span></a>
       </div>
     </div>
   </section>
