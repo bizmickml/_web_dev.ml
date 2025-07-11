@@ -175,14 +175,14 @@
   align-self: center;
 }
 
-#pricing .item-list-header {
+#pricing .package-container .item-list-header {
   text-align: left;
   align-self: start;
   font-size: 1.1rem;
   margin-bottom: .5rem;
 }
 
-#pricing ul.included-items-list {
+#pricing .package-container ul.included-items-list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -190,7 +190,7 @@
   text-align: left;
 }
 
-#pricing ul.included-items-list li {
+#pricing .package-container ul.included-items-list li {
   flex: 1 1 100%;
   display: flex;
   flex-wrap: nowrap;
@@ -201,20 +201,20 @@
   margin-left: .5rem;
 }
 
-#pricing ul.included-items-list li:not(:last-of-type) {
+#pricing .package-container ul.included-items-list li:not(:last-of-type) {
   border-bottom: .1rem solid var(--blue-dark-trans);
 }
 
-#pricing ul.included-items-list li.prev-package-list-item {
+#pricing .package-container ul.included-items-list li.prev-package-list-item {
   opacity: .65;
 }
 
-#pricing .disclaimer {
+#pricing .package-container .disclaimer {
   font-size: .8rem;
   text-align: center;
 }
 
-#pricing .special {
+#pricing .package-container .special {
   position: absolute;
   top: -12.75rem;
   right: -12.75rem;
@@ -230,7 +230,7 @@
   padding-bottom: .25rem;
 }
 
-#pricing .special ul {
+#pricing .package-container .special ul {
   list-style: none;
   color: white;
   font-weight: bold;
@@ -244,6 +244,22 @@
 
 #pricing #add-on-services .included-items-list span {
   font-style: italic;
+}
+
+#pricing .package-container .package-cta {
+  font-size: 1.2rem;
+  display: flex; 
+  width: 90%;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pricing .package-container .package-cta div {
+  flex: 1 1 30%;
+  height: 1px;
+  background: var(--blue-dark);
+  width: 100%;
 }
 
 #pricing #intro-pricing-disclaimer {

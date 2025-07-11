@@ -27,6 +27,28 @@ h1 {
   text-shadow: .05rem .05rem .1rem var(--yellow-dark);
 }
 
+#cta-welcome {
+  background: var(--yellow);
+  border-radius: .25rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: var(--black);
+  box-shadow: 0 0 .3rem var(--yellow-dark);
+}
+
+#cta-welcome a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#cta-welcome a p {
+  transition: 200ms;
+}
+
+#cta-welcome a p:hover {
+  transform: scale(110%);
+}
+
 /* -------- add quick start section later -------
 
 #nav-btn-wrapper {

@@ -38,7 +38,8 @@ header a, header li{
   transition: 200ms;
 }
 
-#phone-link:hover, #nav ul li:hover {
+#phone-link:hover, 
+#nav ul li:hover {
   transform: scale(110%);
 }
 
